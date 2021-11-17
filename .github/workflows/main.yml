@@ -36,7 +36,7 @@ jobs:
           # bucket name
           awsBucket: my-portfolio-codealong
           # subfolder in bucket to upload data to
-          s3Subfolder: /
+          # s3Subfolder: /
           # sourcefolder to upload
           sourceFolder: .
           # tags to set for uploaded files "Business Unit=core3&gitref=someverylongref"
