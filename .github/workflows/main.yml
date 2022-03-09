@@ -34,7 +34,7 @@ jobs:
           # AWS Secret access key  (long one)
           secretAccessKey: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           # bucket name
-          awsBucket: one-page-portfolio
+          awsBucket: busayo-cloud-portfolio
           # subfolder in bucket to upload data to
           # s3Subfolder: /
           # sourcefolder to upload
