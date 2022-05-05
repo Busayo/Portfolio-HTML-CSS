@@ -469,7 +469,7 @@ p {
 }
 
 #projects .project-info .project-link:hover {
-  font-weight: bolder;
+  letter-spacing: 1.5px;
 }
 
 /* End Projects Section */
