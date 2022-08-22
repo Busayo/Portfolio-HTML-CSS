@@ -1,4 +1,4 @@
-github.com/Busayo/Portfolio-HTML-CSS/workflows/main.yml/badge.svg
+https://github.com/Busayo/Portfolio-HTML-CSS/workflows/main.yml/badge.svg
 
 # Portfolio-HTML-CSS
 First Portfolio(HTML and CSS) - Code along 
