@@ -1,4 +1,4 @@
-https://github.com/Busayo/Portfolio-HTML-CSS/workflows/main.yml/badge.svg
+[![CI](https://github.com/Busayo/Portfolio-HTML-CSS/actions/workflows/main.yml/badge.svg)](https://github.com/Busayo/Portfolio-HTML-CSS/actions/workflows/main.yml)
 
 # Portfolio-HTML-CSS
 First Portfolio(HTML and CSS) - Code along 
