@@ -33,11 +33,12 @@ jobs:
       packages: write
       contents: read
     env:
-      IMAGE_NAME: ${{ github.repository }}
+      IMAGE_NAME: portfolio-temp
       REGISTRY: ghcr.io
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with: 
@@ -58,6 +59,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
+          images: portfolio-temp
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
