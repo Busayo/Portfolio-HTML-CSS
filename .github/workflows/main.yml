@@ -1,9 +1,7 @@
 name: CI
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+  # Triggers the workflow on push events but only for the master branch
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -33,7 +31,7 @@ jobs:
       packages: write
       contents: read
     env:
-      IMAGE_NAME: portfolio-temp
+      IMAGE_NAME: portfolio-test
       REGISTRY: ghcr.io
     steps:
       - name: Checkout repository
@@ -54,13 +52,13 @@ jobs:
         id: meta
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          
