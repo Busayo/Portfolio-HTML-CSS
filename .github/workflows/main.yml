@@ -31,7 +31,7 @@ jobs:
       packages: write
       contents: read
     env:
-      IMAGE_NAME: busay00-devops-portfolio
+      IMAGE_NAME: busay00-devops-portfolio-test
       REGISTRY: ghcr.io
     steps:
       - name: Checkout repository
